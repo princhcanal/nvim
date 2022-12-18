@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
-  use 'nvim-tree/nvim-web-devicons'
+  use('nvim-tree/nvim-web-devicons')
   use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
   use {
     'nvim-tree/nvim-tree.lua',
@@ -69,4 +69,5 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  use('terrortylor/nvim-comment')
 end)

@@ -47,3 +47,6 @@ vim.keymap.set("n", "<leader>h", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<leader>l", "<cmd>wincmd l<CR>")
 vim.keymap.set("n", "<leader>j", "<cmd>wincmd j<CR>")
 vim.keymap.set("n", "<leader>k", "<cmd>wincmd k<CR>")
+
+vim.keymap.set("n", "<leader>/", "<cmd>CommentToggle<CR>")
+vim.keymap.set("v", "<leader>/", "<cmd>'<,'>CommentToggle<CR>")
