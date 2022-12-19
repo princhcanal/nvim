@@ -71,4 +71,5 @@ return require('packer').startup(function(use)
   }
   use('terrortylor/nvim-comment')
   use('windwp/nvim-ts-autotag')
+  use('JoosepAlviste/nvim-ts-context-commentstring')
 end)
