@@ -3,21 +3,18 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'sumneko_lua',
-  'rust_analyzer',
+	"sumneko_lua",
+	"rust_analyzer",
 })
 
-local cmp = require('cmp')
+local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-  ["<C-Space>"] = cmp.mapping.complete(),
+	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+	["<C-y>"] = cmp.mapping.confirm({ select = true }),
+	["<C-Space>"] = cmp.mapping.complete(),
 })
-
 
 -- disable completion with tab
 -- this helps with copilot setup
@@ -25,32 +22,32 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 -- cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+	mapping = cmp_mappings,
 })
 
 lsp.set_preferences({
-  suggest_lsp_servers = false,
-  setup_servers_on_start = true,
-  set_lsp_keymaps = true,
-  configure_diagnostics = true,
-  cmp_capabilities = true,
-  manage_nvim_cmp = true,
-  call_servers = 'local',
-  sign_icons = {
-    error = '✘',
-    warn = '▲',
-    hint = '⚑',
-    info = ''
-  }
+	suggest_lsp_servers = false,
+	setup_servers_on_start = true,
+	set_lsp_keymaps = true,
+	configure_diagnostics = true,
+	cmp_capabilities = true,
+	manage_nvim_cmp = true,
+	call_servers = "local",
+	sign_icons = {
+		error = "✘",
+		warn = "▲",
+		hint = "⚑",
+		info = "",
+	},
 })
 
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  update_in_insert = false,
-  underline = true,
-  severity_sort = true,
-  float = true
+	virtual_text = true,
+	signs = true,
+	update_in_insert = false,
+	underline = true,
+	severity_sort = true,
+	float = true,
 })
 
 -- lsp.on_attach(function(client, bufnr)
