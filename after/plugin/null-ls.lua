@@ -1,5 +1,6 @@
 local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local typescript = require("typescript.extensions.null-ls.code-actions")
 
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
@@ -23,6 +24,7 @@ null_ls.setup({
 		}),
 		null_ls.builtins.completion.spell,
 		null_ls.builtins.code_actions.eslint_d,
+		typescript,
 	},
 	-- you can reuse a shared lspconfig on_attach callback here
 	on_attach = function(client, bufnr)
