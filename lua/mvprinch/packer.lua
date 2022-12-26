@@ -84,4 +84,8 @@ return require("packer").startup(function(use)
 	use("weilbith/nvim-code-action-menu", { cmd = "CodeActionMenu" })
 	use("jose-elias-alvarez/typescript.nvim")
 	use("tpope/vim-surround")
+	use("filipdutescu/renamer.nvim", {
+		branch = "master",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 end)

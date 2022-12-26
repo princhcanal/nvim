@@ -31,7 +31,7 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>s", "<cmd>w<CR>")
@@ -50,4 +50,17 @@ vim.keymap.set("n", "<leader>k", "<cmd>wincmd k<CR>")
 
 vim.keymap.set("n", "<leader>ca", "<cmd>CodeActionMenu<CR>")
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+
+vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>rn",
+	'<cmd>lua require("renamer").rename()<cr>',
+	{ noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+	"v",
+	"<leader>rn",
+	'<cmd>lua require("renamer").rename()<cr>',
+	{ noremap = true, silent = true }
+)
