@@ -35,7 +35,7 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>s", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>S", "<cmd>wq<CR>")
+vim.keymap.set("n", "<leader>S", "<cmd>wa<CR>")
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
