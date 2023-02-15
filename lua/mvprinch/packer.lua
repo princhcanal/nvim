@@ -29,27 +29,6 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use({
-		"VonHeikemen/lsp-zero.nvim",
-		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
-			{ "rafamadriz/friendly-snippets" },
-		},
-	})
-	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
@@ -75,7 +54,6 @@ return require("packer").startup(function(use)
 	use("justinmk/vim-sneak")
 	use("unblevable/quick-scope")
 	use("andweeb/presence.nvim")
-	use("weilbith/nvim-code-action-menu", { cmd = "CodeActionMenu" })
 	use("jose-elias-alvarez/typescript.nvim")
 	use("tpope/vim-surround")
 	use("filipdutescu/renamer.nvim", {
@@ -83,4 +61,26 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use("jiangmiao/auto-pairs")
+	use("sindrets/diffview.nvim", {
+		requires = "nvim-lua/plenary.nvim",
+	})
+	-- LSP support
+	use("neovim/nvim-lspconfig")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+
+	-- Autocompletion
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("saadparwaiz1/cmp_luasnip")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-nvim-lua")
+	use("L3MON4D3/LuaSnip")
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		requires = { { "nvim-tree/nvim-web-devicons" } },
+	})
+	use("onsails/lspkind.nvim")
 end)
