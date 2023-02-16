@@ -48,7 +48,6 @@ vim.keymap.set("n", "<leader>l", "<cmd>wincmd l<CR>")
 vim.keymap.set("n", "<leader>j", "<cmd>wincmd j<CR>")
 vim.keymap.set("n", "<leader>k", "<cmd>wincmd k<CR>")
 
-vim.keymap.set("n", "<leader>ca", "<cmd>CodeActionMenu<CR>")
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 
 vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
