@@ -1,3 +1,5 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 require("typescript").setup({
 	disable_commands = false, -- prevent the plugin from creating Vim commands
 	debug = false, -- enable debug logging for commands
@@ -6,5 +8,11 @@ require("typescript").setup({
 	},
 	server = { -- pass options to lspconfig's setup method
 		-- on_attach = ...,
+		capabilities = capabilities,
+		init_options = {
+			preferences = {
+				importModuleSpecifierPreference = "relative",
+			},
+		},
 	},
 })
