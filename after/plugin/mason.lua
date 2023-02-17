@@ -14,6 +14,10 @@ mason_lspconfig.setup({
 	},
 })
 
+lsp_config["eslint"].setup({
+	capabilities = capabilities,
+})
+
 lsp_config["angularls"].setup({
 	capabilities = capabilities,
 })
@@ -40,8 +44,35 @@ lsp_config["vimls"].setup({
 
 lsp_config["lua_ls"].setup({
 	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 })
 
 lsp_config["rust_analyzer"].setup({
+	capabilities = capabilities,
+})
+
+lsp_config["vimls"].setup({
+	capabilities = capabilities,
+})
+
+lsp_config["prismals"].setup({
+	capabilities = capabilities,
+})
+
+lsp_config["bashls"].setup({
+	capabilities = capabilities,
+})
+
+lsp_config["clangd"].setup({
+	capabilities = capabilities,
+})
+
+lsp_config["pylsp"].setup({
 	capabilities = capabilities,
 })

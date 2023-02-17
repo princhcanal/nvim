@@ -50,6 +50,8 @@ vim.keymap.set("n", "<leader>k", "<cmd>wincmd k<CR>")
 
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 
+vim.keymap.set("n", "<C-f>", "<cmd>lua vim.lsp.buf.format()<CR>")
+
 vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
 	"n",

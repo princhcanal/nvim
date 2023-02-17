@@ -16,14 +16,8 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.prettierd,
-		null_ls.builtins.formatting.prismaFmt,
 		null_ls.builtins.formatting.pg_format,
-		null_ls.builtins.diagnostics.eslint_d,
-		null_ls.builtins.diagnostics.sqlfluff.with({
-			extra_args = { "--dialect", "postgres" },
-		}),
 		null_ls.builtins.completion.spell,
-		null_ls.builtins.code_actions.eslint_d,
 		typescript,
 	},
 	-- you can reuse a shared lspconfig on_attach callback here
