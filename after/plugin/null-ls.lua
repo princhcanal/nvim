@@ -17,7 +17,8 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.pg_format,
-		null_ls.builtins.completion.spell,
+		null_ls.builtins.formatting.rustfmt,
+		null_ls.builtins.formatting.gofumpt,
 		typescript,
 	},
 	-- you can reuse a shared lspconfig on_attach callback here
