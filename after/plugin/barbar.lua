@@ -93,7 +93,7 @@ require("barbar").setup({
 		button = "x",
 		-- Enables / disables diagnostic symbols
 		diagnostics = {
-			[vim.diagnostic.severity.ERROR] = { enabled = true, icon = "ﬀ" },
+			[vim.diagnostic.severity.ERROR] = { enabled = true, icon = "✗ " },
 			[vim.diagnostic.severity.WARN] = { enabled = false },
 			[vim.diagnostic.severity.INFO] = { enabled = false },
 			[vim.diagnostic.severity.HINT] = { enabled = true },
