@@ -28,6 +28,20 @@ lsp_config["cssmodules_ls"].setup({
 
 lsp_config["cssls"].setup({
 	capabilities = capabilities,
+	settings = {
+		css = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore",
+			},
+		},
+		scss = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore",
+			},
+		},
+	},
 })
 
 lsp_config["tailwindcss"].setup({
@@ -74,5 +88,9 @@ lsp_config["clangd"].setup({
 })
 
 lsp_config["pylsp"].setup({
+	capabilities = capabilities,
+})
+
+lsp_config["gopls"].setup({
 	capabilities = capabilities,
 })

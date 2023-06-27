@@ -2,6 +2,16 @@ require("lspsaga").setup({
 	lightbulb = {
 		enable = false,
 	},
+	symbol_in_winbar = {
+		enable = true,
+		separator = " ",
+		ignore_patterns = {},
+		hide_keyword = true,
+		show_file = true,
+		folder_level = 2,
+		respect_root = false,
+		color_mode = true,
+	},
 })
 
 -- LSP finder - Find the symbol's definition
@@ -78,3 +88,11 @@ vim.keymap.set("n", "<leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
 
 -- Floating terminal
 vim.keymap.set({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
+
+vim.cmd([[
+  au BufNewFile,BufRead Jenkinsfile setf groovy
+]])
+
+vim.cmd([[
+  au BufNewFile,BufRead Jenkinsfile.* setf groovy
+]])
